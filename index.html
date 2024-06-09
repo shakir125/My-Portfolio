@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="apple-touch-icon" sizes="180x180" href="asserts/favicon_io (1)/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="asserts/favicon_io (1)/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/asserts/favicon_io (1)/android-chrome-512x512.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/asserts/favicon_io (1)/favicon.ico">
+  <link rel="manifest" href="asserts/favicon_io (1)/site.webmanifest">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .main img {
+      position: relative;
+      margin-top: -5px;
+    }
+
+    .main p {
+      position: absolute;
+      color: #fff;
+      bottom: 50px;
+      margin: 0 200px 200px 300px;
+      font-size: 60px;
+      font-weight: 800;
+    }
+
+    .main p span {
+      margin-left: 20px;
+      color: #0a0a23;
+      font-size: 40px;
+    }
+
+    .button {
+      position: absolute;
+      bottom: 200px;
+      margin-left: 350px;
+    }
+
+    .button button {
+      background-color: #0a0a23;
+      color: #fff;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 6px;
+      border: none;
+      margin-left: 10px;
+    }
+
+    .button button:hover {
+      color: #0a0a23;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .icons {
+      position: absolute;
+      bottom: 130px;
+      margin: 10px 10px 10px 350px;
+    }
+
+    .icons i {
+      margin-left: 10px;
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    .icons i:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .about {
+      margin: -80px 150px 10px 150px;
+      background-color: rgb(237, 221, 221);
+      border: 2px solid #0a0a23;
+    }
+
+    .heading {
+      margin: 10px 10px 70px 10px;
+    }
+
+    .heading h1 {
+      text-align: center;
+      color: #0a0a23;
+      font-size: 40px;
+      font-weight: 800;
+    }
+
+    .my-img {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .my-img img {
+      background-color: rgb(102, 19, 102);
+      border-radius: 50%;
+    }
+
+    .about-me h1:hover {
+      text-shadow: 5px 5px 10px #020241;
+      cursor: pointer;
+    }
+
+    .about-me p {
+      color: rgb(78, 5, 78);
+      text-align: center;
+      margin: 20px 20px 10px 20px;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .about-me p span {
+      color: #0a0a23;
+    }
+
+    .item {
+      text-align: center;
+      padding: 10px;
+      border: none;
+    }
+
+    .item a button {
+      border: 2px solid #0a0a23;
+      color: #0a0a23;
+      padding: 10px 30px 10px 30px;
+      font-size: 24px;
+      border-radius: 25px;
+      margin-left: 10px;
+      text-align: center;
+    }
+
+    .item a button:hover {
+      color: #fff;
+      background-color: #0a0a23;
+      cursor: pointer;
+    }
+
+    .cta {
+      background-color: hsla(127, 8%, 22%, 1);
+      color: #fff;
+      width: 100%;
+    }
+
+    .work {
+      margin: 20px 150px 10px 150px;
+    }
+
+    .middle {
+      margin: 20px 150px 10px 150px;
+      padding: 20px;
+    }
+
+    .middle h2 {
+      text-align: center;
+      font-size: 60px;
+      font-weight: 1000;
+      padding: 20px;
+      margin: 10px 40px 10px 20px;
+    }
+
+    .middle-para p {
+      margin: 10px 70px 10px 70px;
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .middle a {
+      margin-left: 200px;
+    }
+
+    .middle a button {
+      background-color: hsla(35, 87%, 49%, 1);
+      padding: 20px;
+      border: none;
+      color: hsla(127, 8%, 14%, 1);
+      font-size: 20px;
+      font-weight: 500;
+      border: 1px solid hsla(35, 87%, 49%, 1);
+      border-radius: 4px;
+    }
+
+    .middle a button:hover {
+      background-color: hsla(35, 87%, 69%, 1);
+      cursor: pointer;
+    }
+
+    .column {
+      display: flex;
+      background-color: #020241;
+      margin: 40px 130px 10px 130px;
+      padding: 20px;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .row {
+      display: flex;
+      padding: 10px;
+    }
+
+    .heading-1 h1 {
+      margin: 20px 10px 10px 40px;
+      font-size: 30px;
+      font-weight: 1200;
+      color: #fff;
+    }
+
+    .heading-2 p {
+      margin: 20px 10px 10px 40px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .get-button {
+      margin: 20px 10px 10px 40px;
+    }
+
+    .get-button a button {
+      background-color: #020241;
+      padding: 20px 50px 20px 50px;
+      color: #fff;
+      border: 3px solid #5be9b9;
+      border-radius: 50px;
+      font-size: 20px;
+    }
+
+    .get-button a button:hover {
+      background-color: #5be9b9;
+      cursor: pointer;
+      color: #020241;
+    }
+
+    .main-footer {
+      position: absolute;
+      background-color: #6e07f3;
+      color: #fff;
+      margin-top: -80px;
+      z-index: -1;
+    }
+
+    .main-1 {
+      margin: 10px 10px 10px 362px;
+      padding: 10px;
+    }
+
+    .middle-1 {
+      margin: 10px 10px 10px 405px;
+      padding: 10px;
+    }
+
+    .inner-1 {
+      margin: 10px 10px 10px 405px;
+      padding: 10px;
+    }
+
+    .footer-bottom {
+      background-color: #6e07f3;
+    }
+
+    .bottom-inner {
+      color: #fff;
+      margin: 10px 200px 10px 300px;
+      padding: 10px
+    }
+
+    .bottom-inner p {
+      margin: 10px 100px 10px 100px;
+      font-size: 40px;
+      font-weight: 800;
+    }
+
+    .bottom-inner p span {
+      margin: 10px 100px 10px 100px;
+    }
+
+    .bottom-icons {
+      margin: 10px 300px 10px 500px;
+    }
+
+    .bottom-icons i {
+      color: #fff;
+      font-size: 30px;
+      margin-left: 10px;
+      padding: 10px;
+    }
+
+    .bottom-icons i:hover {
+      color: #0a0a23;
+      cursor: pointer;
+    }
+
+    .bottom-less {
+      background-color: #6e07f3;
+      color: #fff;
+      margin-top: -10px;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .news-letter {
+      margin: 10px 100px 10px 540px;
+    }
+
+    .news-letter h3 {
+      color: #fff;
+      font-size: 30px;
+    }
+
+    .news-letter p {
+      color: hsla(127, 8%, 14%, 1);
+      font-size: 20px;
+      font-weight: 600;
+      margin: 10px 400px 10px 0;
+    }
+
+    .news-letter input[type="text"] {
+      padding: 10px;
+      background-color: #d7d7e4;
+      border: none;
+      outline: none;
+      border-radius: 2px;
+    }
+
+    input[type="text"]::placeholder {
+      color: #181515;
+    }
+
+    .news-letter input[type="submit"] {
+      margin: 10px 10px 10px 0;
+      padding: 10px 60px 10px 60px;
+      background-color: hsla(35, 87%, 49%, 1);
+      border: none;
+      font-size: 20px;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    input[type="submit"]::placeholder {
+      text-align: center;
+      color: rgb(117, 113, 113);
+
+    }
+
+    .news-letter input[type="submit"]:hover {
+      background-color: hsla(35, 87%, 69%, 1);
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="main">
+
+      <img width="100%" height="40%" src="asserts/main.png" alt="" />
+
+      <p>Hi, I am Shaharyar Shakir <span> Full Stack Developer</span></p>
+
+      <div class="button">
+        <a href=""> <button>Let's Talk</button></a>
+        <a href="services.html"> <button>Hire us</button></a>
+
+      </div>
+      <div class="icons">
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+      </div>
+    </div>
+    <a href="index.html"><img style="position: relative; bottom: 650px;" width="100" src="asserts/logo (2).png"
+        alt=""></a>
+
+  </nav>
+  <section class="about">
+    <div class="heading">
+      <h1>About Me</h1>
+      <div class="my-img">
+        <img width="150" src="asserts/SS.img.png" alt="my-img" />
+      </div>
+      <div class="about-me">
+        <h1>Full Stack Developer</h1>
+        <p>
+          Since beginning my journey as a developer 2 months ago, I've plan to
+          do remote work for agencies, consulted for startups, and
+          collaborated with talented people to create digital products for
+          both business and consumer use. I'm quietly confident, naturally
+          curious, and perpetually working on improving my chops.
+        </p>
+        <p>
+          <span>I design and code beautifully simple things, and I love what I
+            do.</span>
+        </p>
+      </div>
+      <div class="item">
+        <a href="contact.html">
+          <button>Say Hello</button>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="cta">
+    <div class="work">
+      <div class="middle">
+        <h2>Get started with a consultation today.</h2>
+        <div class="middle-para">
+          <p>
+            We can help you turn your business ideas into reality. You can contact us for
+            E-commerce sites development or your agency site development. We also provide services for Web And Mobile
+            App Development.
+          </p>
+        </div>
+
+        <a href="services.html"><button>Let's Work Together</button></a>
+      </div>
+    </div>
+  </section>
+  <div class="column">
+    <div class="row">
+      <div class="heading-1">
+        <h1>Start a Project</h1>
+      </div>
+      <div class="heading-2">
+        <p>
+          Interested in working together? We should <br />
+          queue up a time to chat. I'll buy the coffee
+        </p>
+      </div>
+      <div class="get-button">
+        <a href="product.html"><button>Let's do this</button></a>
+      </div>
+    </div>
+  </div>
+  <footer class="main-footer">
+    <div class="main-1">
+      <div class="middle-1">
+        <div class="inner-1"></div>
+      </div>
+    </div>
+  </footer>
+  <footer class="footer-bottom">
+    <div class="bottom-main">
+      <div class="bottom-inner">
+        <p>Living, learning, & leveling up <span>one day at a time.</span></p>
+      </div>
+      <div class="bottom-icons">
+        <i class="fa-brands fa-x-twitter"></i>
+
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+      </div>
+    </div>
+    </div>
+    <div class="news-letter">
+      <h3>NewsLetter</h3>
+      <p>Stay up to date with my latest news and projects.</p>
+      <input type="text" placeholder="Your Email Address"><br>
+      <input type="submit" placeholder="Subscribe">
+    </div>
+  </footer>
+  <hr>
+  <footer class="bottom-less">
+    <div class="less-copy">
+      <p>&copy; 2024 Shaharyar Shakir</p>
+    </div>
+  </footer>
+</body>
+
+</html>

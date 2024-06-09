@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="apple-touch-icon" sizes="180x180" href="asserts/favicon_io (1)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="asserts/favicon_io (1)/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/asserts/favicon_io (1)/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/asserts/favicon_io (1)/favicon.ico">
+    <link rel="manifest" href="asserts/favicon_io (1)/site.webmanifest">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .back{
+        background-color: #0a0a23;
+        padding: 10px;
+        margin: 0 1100px 10px 0;
+        
+        color: #fff;
+      }
+      .back a{
+        text-decoration: none;
+        color: #fff;
+      }
+      .my-info {
+        font-size: 13px;
+        color: #737373;
+        margin: 20px 10px 80px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        
+      }
+      .my-info img {
+        border: 2px solid rgb(199, 1, 199);
+        padding: 10px;
+        margin: 20px 100px 0 500px;
+        border-radius: 50%;
+        text-align: center;
+        z-index: 1;
+        background-color: rgb(199, 1, 199);
+      }
+      .my-info hr {
+        border: none;
+        height: 1px;
+        background: #d4d4d4;
+        width: 1000px;
+        margin-top: -40px;
+      }
+      .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        margin: 10px 200px 10px 200px;
+        color: #293347a6;
+      }
+      .container h1 {
+        text-align: center;
+        margin: 20px 130px 10px 130px;
+      }
+      .container form {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 6px;
+        margin-left: 100px;
+      }
+      .container input {
+        padding: 12px 20px;
+        margin: 20px 10px 0 10px;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #04aa6d;
+        color: white;
+        padding: 14px 20px;
+        margin-left: 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+       
+      }
+      .text-area{
+        margin: 10px 0 0 120px;
+      }
+      .text-area textarea{
+        width: 500px;
+        height: 200px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        font-size: 16px;
+        resize: none;
+      }
+      input[type="submit"] {
+        border: 2px solid #0a0a23;
+        background-color: #ffffff;
+        color: #0a0a23;
+        margin: 10px 0 0 300px;
+        border-radius: 20px;
+        font-size: 20px;
+        padding: 10px 50px 10px 50px;
+      }
+      input[type="submit"]:hover {
+        background-color: #0a0a23;
+        color: #ffffff;
+        cursor: pointer;
+      }
+      .footer-bottom{
+        background-color: #6e07f3;
+      }
+      .bottom-inner{
+        color: #fff;
+        margin: 10px 200px 10px 300px;
+        padding: 10px
+      }
+      .bottom-inner p{
+        margin: 10px 100px 10px 100px;
+        font-size: 40px;
+        font-weight: 800;
+      }
+      .bottom-inner p span{
+        margin: 10px 100px 10px 100px;
+      }
+      .bottom-icons{
+        margin: 10px 300px 10px 500px;
+      }
+      .bottom-icons i{
+        color: #fff;
+        font-size: 30px;
+        margin-left: 10px;
+        padding: 10px;
+      }
+    .bottom-icons i:hover{
+      color: #0a0a23;
+      cursor: pointer;
+    }
+    .bottom-less{
+      background-color: #6e07f3;
+      color: #fff;
+      margin-top: -10px;
+      text-align: center;
+      padding: 10px;
+    }
+    .news-letter{
+      margin: 10px 100px 10px 540px;
+    }
+    .news-letter h3{
+      color: #fff;
+      font-size: 30px;
+    }
+    .news-letter p{
+      color: hsla(127, 8%, 14%, 1);
+      font-size: 20px;
+      font-weight: 600;
+      margin: 10px 400px 10px 0;
+    }
+    .news-letter input[type="text"]{
+     padding: 10px;
+     background-color: #d7d7e4;
+     border: none;
+     outline: none;
+     border-radius: 2px;
+    }
+    input[type="text"]::placeholder{
+      color: #181515;
+    }
+    .news-letter input[type="submit"]{
+margin: 10px 10px 10px 0;
+padding: 10px 60px 10px 60px;
+background-color: hsla(35, 87%, 49%, 1);
+border: none;
+font-size: 20px;
+border-radius: 6px;
+outline: none;
+      }
+      input[type="submit"]::placeholder{
+        text-align: center;
+        color: rgb(229, 205, 205);
+       
+    }
+    .news-letter input[type="submit"]:hover{
+      background-color: hsla(35, 87%, 69%, 1);
+      cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="back">
+      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    </div>
+    <a href="index.html"><img style="margin: -40px 0 0 1100px; color: #0a0a23;" width="100" src="asserts/logo (2).png" alt=""></a>
+    <div class="my-info">
+      <div class="img">
+        <img width="50" src="asserts/SS.img.png" alt="" />
+        <hr />
+      </div>
+    </div>
+    <div class="container">
+        <h1>Thanks for taking the time to reach out. How can I help you today?</h1>
+      <form action="/action_page.php">
+      
+        <input type="text" placeholder="Your name" />
+
+      
+        <input type="email" placeholder="Your Email" />
+      </form>
+
+      <div class="text-area">
+        <p><label for="subject">Message</label></p>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+      </div>
+      <input type="submit" value="Submit" />
+    </div>
+    <footer class="footer-bottom">
+      <div class="bottom-main">
+        <div class="bottom-inner">
+          <p>Living, learning, & leveling up <span>one day at a time.</span></p>
+        </div>
+        <div class="bottom-icons">
+           <i class="fa-brands fa-x-twitter"></i>
+         
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        </div>
+      </div>
+      <div class="news-letter">
+        <h3>NewsLetter</h3>
+        <p>Stay up to date with my latest news and projects.</p>
+        <input type="text" placeholder="Your Email Address"><br>
+        <input type="submit" placeholder="Subscribe">
+      </div>
+    </footer>
+    <hr>
+    <footer class="bottom-less">
+      <div class="less-copy">
+        <p>&copy; 2024 Shaharyar Shakir</p>
+      </div>
+    </footer>
+  </body>
+</html>
